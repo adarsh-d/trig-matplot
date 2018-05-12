@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-fig = plt.figure("Trignometric Functions")
+fig = plt.figure("Trigonometric Functions")
 #fig = plt.figure(figsize=(5,5))
 ax = fig.add_subplot(111)
 
