@@ -2,10 +2,14 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-fig = plt.figure("Trigonometric Functions")
-#fig = plt.figure(figsize=(5,5))
+fig = plt.figure("Trignometric Functions")
+
 ax = fig.add_subplot(111)
 
+# lock the aspect
+ax.set_aspect(1)
+
+# visible axes segment
 xy_min = -2.5
 xy_max = 2.5
 ax.set_xlim(xy_min, xy_max)
