@@ -1,8 +1,13 @@
-﻿import numpy as np
+﻿#
+# Display trigonometric functions on a unit circle
+# Adarsh Daheriya 2018-05-12
+#
+
+import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-fig = plt.figure("Trignometric Functions")
+fig = plt.figure("Trigonometric Functions")
 
 ax = fig.add_subplot(111)
 
@@ -10,8 +15,8 @@ ax = fig.add_subplot(111)
 ax.set_aspect(1)
 
 # visible axes segment
-xy_min = -2.5
-xy_max = 2.5
+xy_min = -3
+xy_max = 3
 ax.set_xlim(xy_min, xy_max)
 ax.set_ylim(xy_min, xy_max)
 
@@ -73,15 +78,19 @@ ax.annotate('cos', xy=(1, 1), xytext=(0.4, -0.15))
 #tangent
 Tangent = patches.FancyArrowPatch([sec, 0], [0, csc], arrowstyle="|-|", color = "red")
 ax.add_patch(Tangent)
-plt.annotate('tangent', xy=(1, 1), xytext=(0.3, 1.5), color = 'red')
+plt.annotate('tangent', xy=(1, 1), xytext=(1.3, -1), color = 'red')
 
 #cosec
 Csc = patches.FancyArrowPatch([-0.1, 0], [-0.1, csc], arrowstyle="]-[", color = "magenta")
+ax.add_patch(Csc)
+Csc = patches.FancyArrowPatch([-0.1, 0.05], [cot, 1.1], arrowstyle="]-[", color = "magenta")
 ax.add_patch(Csc)
 ax.annotate('csc', xy=(1, 1), xytext=(-0.4, 1), color = 'magenta')
 
 #sec
 Sec = patches.FancyArrowPatch([0, -0.3], [sec, -0.3], arrowstyle="]-[", color = "cyan")
+ax.add_patch(Sec)
+Sec = patches.FancyArrowPatch([0, 0.05], [1, tan+0.05], arrowstyle="]-[", color = "cyan")
 ax.add_patch(Sec)
 ax.annotate('sec', xy=(1, 1), xytext=(0.4, -0.45), color = 'cyan')
 
@@ -94,6 +103,8 @@ ax.add_patch(Tan)
 
 #cot
 Cot = patches.FancyArrowPatch([0, 1.05], [cot, 1.05], arrowstyle="]-[", color = "green")
+ax.add_patch(Cot)
+Cot = patches.FancyArrowPatch([0.04, csc], [cos+0.04, sin], arrowstyle="]-[", color = "green")
 ax.add_patch(Cot)
 ax.annotate('cot', xy=(1, 1), xytext=(cot/2, 1.1), color = 'green')
 
